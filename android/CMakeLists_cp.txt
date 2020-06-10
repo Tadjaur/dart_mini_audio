@@ -1,0 +1,139 @@
+cmake_minimum_required(VERSION 3.4.1)  # for example
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/toolkit
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/asf
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/mpeg
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/ogg
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/ogg/vorbis
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/ogg/flac
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/flac
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/mpc
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/mp4
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/mpeg/id3v2
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/mpeg/id3v2/frames
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/wavpack
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/ogg/speex
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/taglib/trueaudio
+    ${CMAKE_CURRENT_SOURCE_DIR}/../miniaudio/taglib-1.11.1/bindings/cd
+)
+
+set(mpeg_SRCS
+  mpeg/mpegfile.cpp
+  mpeg/mpegproperties.cpp
+  mpeg/mpegheader.cpp
+  mpeg/xingheader.cpp
+)
+
+set(id3v1_SRCS
+  mpeg/id3v1/id3v1tag.cpp
+  mpeg/id3v1/id3v1genres.cpp
+)
+
+set(id3v2_SRCS
+  mpeg/id3v2/id3v2framefactory.cpp
+  mpeg/id3v2/id3v2synchdata.cpp
+  mpeg/id3v2/id3v2tag.cpp
+  mpeg/id3v2/id3v2header.cpp
+  mpeg/id3v2/id3v2frame.cpp
+  mpeg/id3v2/id3v2footer.cpp
+  mpeg/id3v2/id3v2extendedheader.cpp
+  )
+
+set(frames_SRCS
+  mpeg/id3v2/frames/attachedpictureframe.cpp
+  mpeg/id3v2/frames/commentsframe.cpp
+  mpeg/id3v2/frames/eventtimingcodesframe.cpp
+  mpeg/id3v2/frames/generalencapsulatedobjectframe.cpp
+  mpeg/id3v2/frames/ownershipframe.cpp
+  mpeg/id3v2/frames/popularimeterframe.cpp
+  mpeg/id3v2/frames/privateframe.cpp
+  mpeg/id3v2/frames/relativevolumeframe.cpp
+  mpeg/id3v2/frames/synchronizedlyricsframe.cpp
+  mpeg/id3v2/frames/textidentificationframe.cpp
+  mpeg/id3v2/frames/uniquefileidentifierframe.cpp
+  mpeg/id3v2/frames/unknownframe.cpp
+  mpeg/id3v2/frames/unsynchronizedlyricsframe.cpp
+  mpeg/id3v2/frames/urllinkframe.cpp
+  mpeg/id3v2/frames/chapterframe.cpp
+  mpeg/id3v2/frames/tableofcontentsframe.cpp
+  mpeg/id3v2/frames/podcastframe.cpp
+)
+
+set(ogg_SRCS
+  ogg/oggfile.cpp
+  ogg/oggpage.cpp
+  ogg/oggpageheader.cpp
+  ogg/xiphcomment.cpp
+)
+
+set(vorbis_SRCS
+  ogg/vorbis/vorbisfile.cpp
+  ogg/vorbis/vorbisproperties.cpp
+)
+
+set(flacs_SRCS
+  flac/flacfile.cpp
+  flac/flacpicture.cpp
+  flac/flacproperties.cpp
+  flac/flacmetadatablock.cpp
+  flac/flacunknownmetadatablock.cpp
+)
+
+set(oggflacs_SRCS
+  ogg/flac/oggflacfile.cpp
+)
+
+set(mpc_SRCS
+  mpc/mpcfile.cpp
+  mpc/mpcproperties.cpp
+)
+
+set(mp4_SRCS
+  mp4/mp4file.cpp
+  mp4/mp4atom.cpp
+  mp4/mp4tag.cpp
+  mp4/mp4item.cpp
+  mp4/mp4properties.cpp
+  mp4/mp4coverart.cpp
+)
+
+
+set(wavpack_SRCS
+  wavpack/wavpackfile.cpp
+  wavpack/wavpackproperties.cpp
+)
+
+set(speex_SRCS
+  ogg/speex/speexfile.cpp
+  ogg/speex/speexproperties.cpp
+)
+
+
+set(trueaudio_SRCS
+  trueaudio/trueaudiofile.cpp
+  trueaudio/trueaudioproperties.cpp
+)
+
+set(asf_SRCS
+  asf/asftag.cpp
+  asf/asffile.cpp
+  asf/asfproperties.cpp
+  asf/asfattribute.cpp
+  asf/asfpicture.cpp
+)
+
+
+
+link_libraries(OpenSLES)
+# link_libraries(aaudio)
+add_library( native_player
+
+             # Sets the library as a shared library.
+             SHARED
+
+             # Provides a relative path to your source file(s).
+
+             ../miniaudio/taglib-1.11.1/bindings/c/tag_c.cpp
+             ../miniaudio/taglib-1.11.1/bindings/c/tag_c.h
+             ../miniaudio/miniplayer.c )

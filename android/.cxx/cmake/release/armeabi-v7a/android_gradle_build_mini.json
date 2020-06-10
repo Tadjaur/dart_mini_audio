@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/android/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/opt/SDK/android/cmake/3.6.4111459/bin/cmake --build /media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/android/.cxx/cmake/release/armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "native_player-Release-armeabi-v7a": {
+      "artifactName": "native_player",
+      "buildCommand": "/opt/SDK/android/cmake/3.6.4111459/bin/cmake --build /media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/android/.cxx/cmake/release/armeabi-v7a --target native_player",
+      "abi": "armeabi-v7a",
+      "output": "/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/example/build/mini_player/intermediates/cmake/release/obj/armeabi-v7a/libnative_player.so"
+    }
+  }
+}

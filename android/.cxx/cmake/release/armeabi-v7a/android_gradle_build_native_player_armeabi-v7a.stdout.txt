@@ -1,0 +1,27 @@
+[1/2] Building C object CMakeFiles/native_player.dir/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c.o
+[2/2] Linking C shared library /media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/example/build/mini_player/intermediates/cmake/release/obj/armeabi-v7a/libnative_player.so
+FAILED: : && /opt/SDK/android/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/bin/clang  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/opt/SDK/android/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/opt/SDK/android/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -Oz -DNDEBUG  -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--fatal-warnings -Wl,--exclude-libs,libunwind.a -Wl,--no-undefined -Qunused-arguments -shared -Wl,-soname,libnative_player.so -o /media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/example/build/mini_player/intermediates/cmake/release/obj/armeabi-v7a/libnative_player.so CMakeFiles/native_player.dir/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c.o  -latomic -lm && :
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniaudio.h:29054: error: undefined reference to 'slCreateEngine'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniaudio.h:0: error: undefined reference to 'SL_IID_ENGINE'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:163: error: undefined reference to 'taglib_file_new_type'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:166: error: undefined reference to 'taglib_file_tag'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:167: error: undefined reference to 'taglib_file_audioproperties'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:170: error: undefined reference to 'taglib_audioproperties_bitrate'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:171: error: undefined reference to 'taglib_audioproperties_samplerate'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:172: error: undefined reference to 'taglib_audioproperties_channels'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:173: error: undefined reference to 'taglib_audioproperties_length'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:193: error: undefined reference to 'taglib_tag_free_strings'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:194: error: undefined reference to 'taglib_file_free'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:181: error: undefined reference to 'taglib_tag_title'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:182: error: undefined reference to 'taglib_tag_artist'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:183: error: undefined reference to 'taglib_tag_album'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:184: error: undefined reference to 'taglib_tag_year'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:185: error: undefined reference to 'taglib_tag_comment'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:186: error: undefined reference to 'taglib_tag_track'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c:187: error: undefined reference to 'taglib_tag_genre'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniaudio.h:0: error: undefined reference to 'SL_IID_ANDROIDSIMPLEBUFFERQUEUE'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniaudio.h:0: error: undefined reference to 'SL_IID_RECORD'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniaudio.h:0: error: undefined reference to 'SL_IID_OUTPUTMIX'
+/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniaudio.h:0: error: undefined reference to 'SL_IID_PLAY'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
