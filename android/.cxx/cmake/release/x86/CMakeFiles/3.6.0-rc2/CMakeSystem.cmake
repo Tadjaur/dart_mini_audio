@@ -1,9 +1,9 @@
-set(CMAKE_HOST_SYSTEM "Linux-5.6.0-2parrot1-amd64")
+set(CMAKE_HOST_SYSTEM "Linux-5.9.0-2parrot1-amd64")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "5.6.0-2parrot1-amd64")
+set(CMAKE_HOST_SYSTEM_VERSION "5.9.0-2parrot1-amd64")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
-include("/opt/SDK/android/ndk/21.0.6113669/build/cmake/android.toolchain.cmake")
+include("/opt/SDK/android/ndk/21.3.6528147/build/cmake/android.toolchain.cmake")
 
 set(CMAKE_SYSTEM "Android-1")
 set(CMAKE_SYSTEM_NAME "Android")

@@ -1,0 +1,3 @@
+[submodule "miniaudio_fork/taglib-ndk"]
+	path = miniaudio_fork/taglib-ndk
+	url = https://github.com/tumugin/taglib-ndk

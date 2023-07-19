@@ -25,7 +25,7 @@ class _AudioPlayerBinder {
       system = "linux";
       extension = "so";
     }
-    path = join(io.Directory.systemTemp.absolute.path, "mini_player",
+    path = p.join(p.dirname(io.Platform.resolvedExecutable),"flutter_assets","packages","mini_player","native_lib",
         "native_platform_player-$system.$architecture.$extension");
     _dylib ??= ffi.DynamicLibrary.open(path);
   }
@@ -38,6 +38,17 @@ class _AudioPlayerBinder {
     }
     final aInit = _dylib.lookup<ffi.NativeFunction<_native_init_func>>(_NativeF.init).asFunction<_PlatformInit>();
     return aInit(stringPointer, ln);
+  }
+
+  AudioProperties _mediaProperties(String mediaPath) {
+    final stringPointer = pkg_ffi.Utf8.toUtf8(mediaPath);
+    final aInit = _dylib.lookup<ffi.NativeFunction<_audio_properties_func>>(_NativeF.mediaProperties).asFunction<_audio_properties_func>();
+    final ptr = aInit(stringPointer);
+    if(ptr == null || ptr.address == 0x0) return null;
+    final StructAudioProperties res = ptr.ref;
+    final result = AudioProperties(bitrate: res.bitrate, sampleRate: res.sample_rate, channels: res.channels, length: res.length);
+    pkg_ffi.free(ptr);
+    return result;
   }
 
   int _action(String nativeFunc) {

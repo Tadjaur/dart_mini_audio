@@ -31,9 +31,7 @@
     },
     "buildSystemArgumentList": [],
     "cFlagList": [],
-    "cppFlagsList": [
-      "-std\u003dc++14 -frtti -fexceptions"
-    ],
+    "cppFlagsList": [],
     "variantName": "debug",
     "soFolder": "/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/example/build/mini_player/intermediates/cmake/debug/lib",
     "objFolder": "/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/example/build/mini_player/intermediates/cmake/debug/obj",

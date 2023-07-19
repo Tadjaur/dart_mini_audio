@@ -1,0 +1,3 @@
+# ninja log v5
+0	40027	0	CMakeFiles/native_player.dir/opt/PROJECT/flutter/plugins/mini_player/miniaudio/miniplayer.c.o	41bdf60af69dc82e
+40027	40122	0	/opt/PROJECT/flutter/gt_music_player/build/mini_player/intermediates/cmake/release/obj/arm64-v8a/libnative_player.so	42c3b4f60e35b2e8

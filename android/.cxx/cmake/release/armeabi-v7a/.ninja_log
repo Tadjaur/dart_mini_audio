@@ -1,2 +1,3 @@
 # ninja log v5
-0	13354	0	CMakeFiles/native_player.dir/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/miniaudio/miniplayer.c.o	e6232e15ba77437c
+0	18266	0	CMakeFiles/native_player.dir/opt/PROJECT/flutter/plugins/mini_player/miniaudio/miniplayer.c.o	ab3d508fe5131f5e
+18266	18335	0	/opt/PROJECT/flutter/gt_music_player/build/mini_player/intermediates/cmake/release/obj/armeabi-v7a/libnative_player.so	70a8586df7a897ed

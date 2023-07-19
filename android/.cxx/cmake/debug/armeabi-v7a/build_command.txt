@@ -7,7 +7,6 @@ arguments :
 -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/media/twork/WorkOnly/Taur/Flutter/plugins/mini_player/example/build/mini_player/intermediates/cmake/debug/obj/armeabi-v7a
 -DCMAKE_BUILD_TYPE=Debug
 -DANDROID_NDK=/opt/SDK/android/ndk/21.0.6113669
--DCMAKE_CXX_FLAGS=-std=c++14 -frtti -fexceptions
 -DCMAKE_TOOLCHAIN_FILE=/opt/SDK/android/ndk/21.0.6113669/build/cmake/android.toolchain.cmake
 -DCMAKE_MAKE_PROGRAM=/opt/SDK/android/cmake/3.6.4111459/bin/ninja
 -GAndroid Gradle - Ninja

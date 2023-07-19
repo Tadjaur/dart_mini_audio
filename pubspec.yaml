@@ -40,8 +40,8 @@ flutter:
 
   # To add assets to your plugin package, add an assets section, like this:
   assets:
-    - packages/mini_player/native_lib/native_platform_player-32.so
-    - packages/mini_player/native_lib/native_platform_player-64.so
+    - packages/mini_player/native_lib/native_platform_player-linux.32.so
+    - packages/mini_player/native_lib/native_platform_player-linux.64.so
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see

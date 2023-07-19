@@ -33,11 +33,6 @@ android {
 
     defaultConfig {
         minSdkVersion 16
-        externalNativeBuild {
-            cmake {
-                cppFlags "-std=c++14 -frtti -fexceptions"
-            }
-        }
     }
 
     externalNativeBuild {

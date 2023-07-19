@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:mini_player/mini_player.dart';
@@ -14,6 +15,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   bool _metaData;
+  MiniPlayer mp;
 
   @override
   void initState() {
@@ -23,15 +25,22 @@ class _MyAppState extends State<MyApp> {
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
     bool metaData;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      final mp = MiniPlayer();
-      metaData =
-          await mp.init(["/home/twork/Downloads/Music/alan walker/Alan Walker ft. Gavin James - Tired - YouTube.MP3"]);
-      mp.sendEvent(AudioEvent.play);
-    } finally {
-      //pass
+    if (mp == null) {
+      mp = MiniPlayer();
+      final List<String> listName = [];
+      final Directory directory = Directory("/sdcard/Music/sam smith");
+      for (final fse in directory.listSync()) {
+        if (fse is File) {
+          listName.add(fse.absolute.path);
+        }
+      }
+      try {
+        metaData = await mp.init(listName);
+      } finally {
+        //pass
+      }
     }
+    mp.sendEvent(AudioEvent.play);
 
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling

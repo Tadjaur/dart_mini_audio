@@ -1,0 +1,2 @@
+[1/2] Building C object CMakeFiles/native_player.dir/opt/PROJECT/flutter/plugins/mini_player/miniaudio/miniplayer.c.o
+[2/2] Linking C shared library /opt/PROJECT/flutter/gt_music_player/build/mini_player/intermediates/cmake/release/obj/x86_64/libnative_player.so
